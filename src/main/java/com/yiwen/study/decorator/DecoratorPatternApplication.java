@@ -6,4 +6,13 @@ package com.yiwen.study.decorator;
  * @describe
  */
 public class DecoratorPatternApplication {
+
+
+    public static void main(String[] args) {
+        Beverage coffee = new MilkDecorator(new Coffee());
+        System.out.print(coffee.getDesc() + "Price:" + coffee.cost());
+
+        Beverage coke = new CakeDecorator(new Coke());
+        System.out.print(coke.getDesc() + "Price:" + coke.cost());
+    }
 }
